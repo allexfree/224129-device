@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Девайс</title>
@@ -22,15 +23,11 @@
             <input id="input-search" class="search-form__input" type="search" placeholder="Поиск по сайту">
             <button class="search-form__btn" type="submit">Найти</button>
           </form>
-          <nav class="user-nav">
-            <a class="user-nav__link" href="#">
-              <img class="user-nav__avatar" src="" alt="Аватар пользователя">
-              <span class="user-nav__name">Валентин Петухов</span>
-            </a>
-            <a class="user-nav__login" href="#" title="Войти"></a>
+          <div class="user-nav">
+            <a class="user-nav__link" href="#">Войти</a>
             <a class="user-nav__compare" href="#">Сравнить</a>
             <a class="user-nav__basket" href="#">Корзина</a>
-          </nav>
+          </div>
         </div>
 
         <nav class="main-menu">
@@ -52,14 +49,23 @@
                 </li>
               </ul>
             </li>
-            <li class="main-menu__item"><a href="#">Доставка</a></li>
-            <li class="main-menu__item"><a href="#">Гарантия</a></li>
-            <li class="main-menu__item"><a href="#">Контакты</a></li>
+            <li class="main-menu__item">
+              <a href="#">Доставка</a>
+            </li>
+            <li class="main-menu__item">
+              <a href="#">Гарантия</a>
+            </li>
+            <li class="main-menu__item">
+              <a href="#">Контакты</a>
+            </li>
           </ul>
         </nav>
       </div>
     </header>
     <main class="page-main">
+
+      <h1 class="visually-hidden">Интернет-магазин гаджетов и аксессуаров</h1>
+
       <div class="wrapper">
         <div class="promo">
 
@@ -78,49 +84,90 @@
 
               <div class="promo__slider">
                 <ul>
-                  <li class="promo__slide"><!--slide one-->
+                  <li class="promo__slide">
+                    <!--slide one-->
                     <div class="promo__img">
-                      <img src="" alt="Палка для селфи">
+                      <img src="http://placehold.it/150x100" alt="Палка для селфи">
                     </div>
                     <div class="promo__info">
-                      <p class="promo__info-slogan">Делай селфи,<span>как Бен Стиллер</span></p>
-                      <p class="promo__info-text">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
+                      <p class="promo__info-slogan">Делай селфи,
+                        <span>как Бен Стиллер</span>
+                      </p>
+                      <p class="promo__info-text">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом
+                        всего 5 килограмм.
                       </p>
                       <a class="promo__info-link" href="#">Подробнее</a>
-                      <div class="promo__info-param">
-                        <span class="promo__info-param__item">8,5 м</span>
-                        <span class="promo__info-param__item">5 кг</span>
-                        <span class="promo__info-param__item">Карбон</span>
-                      </div>
+                      <table class="promo__info-param">
+                        <thead>
+                          <tr>
+                            <td>Длина палки</td>
+                            <td>Вес палки</td>
+                            <td>Материал</td>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>8,5 м</td>
+                            <td>5 кг</td>
+                            <td>Карбон</td>
+                          </tr>
+                        </tbody>
+                      </table>
                     </div>
                   </li>
-                  <li class="promo__slide"><!--slide two-->
+                  <li class="promo__slide">
+                    <!--slide two-->
                     <div class="promo__img">
-                      <img src="" alt="Фитнес браслет">
+                      <img src="http://placehold.it/150x100" alt="Фитнес браслет">
                     </div>
                     <div class="promo__info">
-                      <p class="promo__info-slogan">Худеем<span>правильно!</span></p>
+                      <p class="promo__info-slogan">Худеем
+                        <span>правильно!</span>
+                      </p>
                       <p class="promo__info-text">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.
                       </p>
                       <a class="promo__info-link" href="#">Подробнее</a>
-                      <div class="promo__info-param">
-                        <span class="promo__info-param__item">48 часов</span>
-                      </div>
+                      <table class="promo__info-param">
+                          <thead>
+                            <tr>
+                              <td>Без подзарядки</td>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>48 часов</td>
+                            </tr>
+                          </tbody>
+                        </table>
                     </div>
                   </li>
-                  <li class="promo__slide"><!--slide three-->
+                  <li class="promo__slide">
+                    <!--slide three-->
                     <div class="promo__img">
-                      <img src="" alt="Квадрокоптер">
+                      <img src="http://placehold.it/150x100" alt="Квадрокоптер">
                     </div>
                     <div class="promo__info">
-                      <p class="promo__info-slogan">Пархает как бабочка,<span>жалит как пчела!</span></p>
-                      <p class="promo__info-text">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.
+                      <p class="promo__info-slogan">Пархает как бабочка,
+                        <span>жалит как пчела!</span>
+                      </p>
+                      <p class="promo__info-text">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную
+                        камеру.
                       </p>
                       <a class="promo__info-link" href="#">Подробнее</a>
-                      <div class="promo__info-param">
-                        <span class="promo__info-param__item">800 м</span>
-                        <span class="promo__info-param__item">50 м</span>
-                      </div>
+                      <table class="promo__info-param">
+                          <thead>
+                            <tr>
+                              <td>Дальность полета</td>
+                              <td>Радиус пораженияя</td>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>800 м</td>
+                              <td>50 м</td>
+                            </tr>
+                          </tbody>
+                        </table>
                     </div>
                   </li>
                 </ul>
@@ -132,24 +179,12 @@
       </div>
 
       <div class="assortment">
-        <a class="assortment__link" href="#" title="Виртуальная реальность">
-          <img src="" alt="Виртуалити">
-        </a>
-        <a class="assortment__link" href="#" title="Моноподы для селфи">
-          <img src="" alt="Моноподы">
-        </a>
-        <a class="assortment__link" href="#" title="Экшн-камеры">
-          <img src="" alt="Цифровые камеры для съемки в движении">
-        </a>
-        <a class="assortment__link" href="#" title="Фитнес-браслеты">
-          <img src="" alt="Фитнес-гаджеты и фитнес-трекеры">
-        </a>
-        <a class="assortment__link" href="#" title="Умные часы">
-          <img src="" alt="Смарт-часы">
-        </a>
-        <a class="assortment__link" href="#" title="Квадрокоптеры">
-          <img src="" alt="Вертолет с четырьмя винтами">
-        </a>
+        <a class="assortment__link" href="#" title="Виртуальная реальность"></a>
+        <a class="assortment__link" href="#" title="Моноподы для селфи"></a>
+        <a class="assortment__link" href="#" title="Экшн-камеры"></a>
+        <a class="assortment__link" href="#" title="Фитнес-браслеты"></a>
+        <a class="assortment__link" href="#" title="Умные часы"></a>
+        <a class="assortment__link" href="#" title="Квадрокоптеры"></a>
       </div>
 
       <div class="feature">
@@ -169,19 +204,25 @@
 
             <div class="feature__slider">
               <ul>
-                <li class="feature__slide"><!--slide one-->
-                  <h1 class="feature__slide-title">Доставка</h1>
-                  <p class="feature__slide-text">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.
+                <li class="feature__slide">
+                  <!--slide one-->
+                  <h2 class="feature__slide-title">Доставка</h2>
+                  <p class="feature__slide-text">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем,
+                    поднимая его на ваш этаж.
                   </p>
                 </li>
-                <li class="feature__slide"><!--slide two-->
-                  <h1 class="feature__slide-title">Гарантия</h1>
-                  <p class="feature__slide-text">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.
+                <li class="feature__slide">
+                  <!--slide two-->
+                  <h2 class="feature__slide-title">Гарантия</h2>
+                  <p class="feature__slide-text">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.
+                    Товар, не дом, конечно же.
                   </p>
                 </li>
-                <li class="feature__slide"><!--slide three-->
-                  <h1 class="feature__slide-title">Кредит</h1>
-                  <p class="feature__slide-text">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.
+                <li class="feature__slide">
+                  <!--slide three-->
+                  <h2 class="feature__slide-title">Кредит</h2>
+                  <p class="feature__slide-text">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита.
+                    Выгодные для нашего банка, разумеется.
                   </p>
                 </li>
               </ul>
@@ -192,10 +233,18 @@
       </div>
 
       <div class="partners">
-        <a href="#" class="partners__link" title="DJI"><img src="" alt="Компания DJI"></a>
-        <a href="#" class="partners__link" title="SP Gadgets"><img src="" alt="Компания SP Gadgets"></a>
-        <a href="#" class="partners__link" title="Go Pro"><img src="" alt="Компания Go Pro"></a>
-        <a href="#" class="partners__link" title="VIVE"><img src="" alt="Компания VIVE"></a>
+        <a href="#" class="partners__link" title="DJI">
+          <img src="http://placehold.it/150x100" alt="Компания DJI">
+        </a>
+        <a href="#" class="partners__link" title="SP Gadgets">
+          <img src="http://placehold.it/150x100" alt="Компания SP Gadgets">
+        </a>
+        <a href="#" class="partners__link" title="Go Pro">
+          <img src="http://placehold.it/150x100" alt="Компания Go Pro">
+        </a>
+        <a href="#" class="partners__link" title="VIVE">
+          <img src="http://placehold.it/150x100" alt="Компания VIVE">
+        </a>
       </div>
 
       <div class="company-info">
@@ -212,8 +261,11 @@
         </div>
         <div class="contacts">
           <h2 class="contacts__title">Контакты</h2>
-          <p class="contacts__text">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-          <a class="contacts__map" href="#" title="Адрес офиса"><img src="" alt="улица Строителей дом 15"></a>
+          <p class="contacts__text">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое
+            бывает.</p>
+          <a class="contacts__map" href="#" title="Адрес офиса">
+            <img src="http://placehold.it/150x100" alt="улица Строителей дом 15">
+          </a>
           <a class="contacts__link" href="#">Напишите нам</a>
         </div>
       </div>
@@ -239,15 +291,11 @@
       </div>
 
       <div class="page-footer__block">
-        <nav class="user-nav">
-          <a class="user-nav__link" href="#">
-            <img class="user-nav__avatar" src="" alt="Аватар пользователя">
-            <span class="user-nav__name">Валентин Петухов</span>
-          </a>
-          <a class="user-nav__login" href="#" title="Войти"></a>
+        <div class="user-nav">
+          <a class="user-nav__link" href="#">Войти</a>
           <a class="user-nav__compare" href="#">Сравнить</a>
           <a class="user-nav__basket" href="#">Корзина</a>
-        </nav>
+        </div>
         <p class="tel">Тел.: +7 (495) 495-95-95</p>
         <a class="page-footer__block-link" href="https://htmlacademy.ru/intensive/htmlcss">
         </a>
@@ -257,8 +305,11 @@
   </div>
 
   <div class="popup-map hidden">
-    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Afe4377b97dc8234eb7981701d78a9d615b1ea40eb88b5850a05a94e5e0ac925a&amp;source=constructor" width="960" height="560" frameborder="0"></iframe>
-    <button class="popup-close__btn popup-close__btn--map"><span class="visually-hidden">Закрыть</span></button>
+    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Afe4377b97dc8234eb7981701d78a9d615b1ea40eb88b5850a05a94e5e0ac925a&amp;source=constructor"
+      width="960" height="560" frameborder="0"></iframe>
+    <button class="close-btn close-btn--map" type="button">
+      <span class="visually-hidden">Закрыть</span>
+    </button>
   </div>
 
   <form class="popup-form hidden" action="#" method="post">
@@ -283,8 +334,11 @@
 
       <button class="popup-form__btn" type="submit">Отправить</button>
     </fieldset>
-    <button class="popup-close__btn popup-close__btn--form"><span class="visually-hidden">Закрыть</span></button>
+    <button class="close-btn close-btn--form" type="button">
+      <span class="visually-hidden">Закрыть</span>
+    </button>
   </form>
 
 </body>
+
 </html>
