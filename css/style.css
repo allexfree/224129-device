@@ -70,3 +70,13 @@ img {
   width: 1200px;
   margin: 0 auto;
 }
+
+.partners__link img {
+  filter: grayscale(1);
+  opacity: 0.2;
+}
+
+.partners__link img:hover {
+  filter: none;
+  opacity: 1;
+}
