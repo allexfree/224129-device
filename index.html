@@ -37,15 +37,15 @@
               <ul class="main-menu__dropdown">
                 <li class="main-menu__dropdown-item">
                   <a href="#">Виртуальная реальность</a>
-                  <a href="#">Фитнес браслеты</a>
-                  <a href="#">Квадрокоптеры</a>
+                  <a href="catalog.html">Моноподы для селфи</a>
+                  <a href="#">Экшн-камеры</a>
                 </li>
                 <li class="main-menu__dropdown-item">
-                  <a href="catalog.html">Моноподы для селфи</a>
+                  <a href="#">Фитнес-браслеты</a>
                   <a href="#">Умные часы</a>
                 </li>
                 <li class="main-menu__dropdown-item">
-                  <a href="#">Экшн-камеры</a>
+                  <a href="#">Квадрокоптеры</a>
                 </li>
               </ul>
             </li>
@@ -90,12 +90,11 @@
                     </div>
                     <div class="promo__info">
                       <p class="promo__info-slogan">Делай селфи,
-                        <span>как Бен Стиллер</span>
+                        <span>как Бен Стиллер!</span>
                       </p>
-                      <p class="promo__info-text">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом
-                        всего 5 килограмм.
+                      <p class="promo__info-text">Самая длинная палка для селфи доступна в нашем магазине.<span>Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</span>
                       </p>
-                      <a class="promo__info-link" href="#">Подробнее</a>
+                      <a class="promo__info-link" href="#" onclick="return false">Подробнее</a>
                       <table class="promo__info-param">
                         <thead>
                           <tr>
@@ -125,7 +124,7 @@
                       </p>
                       <p class="promo__info-text">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.
                       </p>
-                      <a class="promo__info-link" href="#">Подробнее</a>
+                      <a class="promo__info-link" href="#" onclick="return false">Подробнее</a>
                       <table class="promo__info-param">
                           <thead>
                             <tr>
@@ -152,7 +151,7 @@
                       <p class="promo__info-text">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную
                         камеру.
                       </p>
-                      <a class="promo__info-link" href="#">Подробнее</a>
+                      <a class="promo__info-link" href="#" onclick="return false">Подробнее</a>
                       <table class="promo__info-param">
                           <thead>
                             <tr>
@@ -177,12 +176,12 @@
         </div>
 
       <div class="assortment">
-        <a class="assortment__link" href="#" title="Виртуальная реальность"></a>
-        <a class="assortment__link" href="#" title="Моноподы для селфи"></a>
-        <a class="assortment__link" href="#" title="Экшн-камеры"></a>
-        <a class="assortment__link" href="#" title="Фитнес-браслеты"></a>
-        <a class="assortment__link" href="#" title="Умные часы"></a>
-        <a class="assortment__link" href="#" title="Квадрокоптеры"></a>
+        <a class="assortment__link" href="#" aria-label="Виртуальная реальность" onclick="return false"></a>
+        <a class="assortment__link" href="#" aria-label="Моноподы для селфи" onclick="return false"></a>
+        <a class="assortment__link" href="#" aria-label="Экшн-камеры" onclick="return false"></a>
+        <a class="assortment__link" href="#" aria-label="Фитнес-браслеты" onclick="return false"></a>
+        <a class="assortment__link" href="#" aria-label="Умные часы" onclick="return false"></a>
+        <a class="assortment__link" href="#" aria-label="Квадрокоптеры" onclick="return false"></a>
       </div>
 
       <div class="feature">
@@ -271,7 +270,7 @@
 
     <footer class="page-footer">
 
-      <div class="logo">
+      <div class="logo logo--footer">
         <a><img src="img/device-logo--footer.svg" width="300" height="64" alt="Логотип Device"></a>
       </div>
 
@@ -282,9 +281,9 @@
           <a class="page-footer__link" href="#">Контакты</a>
         </div>
         <div class="social">
-          <a href="facebook.com" title="facebook"></a>
-          <a href="instagram.com" title="instagram"></a>
-          <a href="twitter.com" title="twitter"></a>
+          <a href="facebook.com" aria-label="facebook"></a>
+          <a href="instagram.com" aria-label="instagram"></a>
+          <a href="twitter.com" aria-label="twitter"></a>
         </div>
       </div>
 
@@ -336,6 +335,8 @@
       <span class="visually-hidden">Закрыть</span>
     </button>
   </form>
+
+  <script src="js/common.js"></script>
 
 </body>
 
