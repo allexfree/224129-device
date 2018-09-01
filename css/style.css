@@ -580,7 +580,7 @@ iframe {
   cursor: pointer;
 }
 
-.promo__slider-wrap input[type="radio"].button-1:checked ~ .promo-paginator > label[for="button-1"]::before {
+.promo__slider-wrap input[type="radio"].promo__button-1:checked ~ .promo-paginator > label[for="promo-button-1"]::before {
   content: "";
   position: absolute;
   top: 0;
@@ -597,7 +597,7 @@ iframe {
   border-radius: 50%;
 }
 
-.promo__slider-wrap input[type="radio"].button-2:checked ~ .promo-paginator > label[for="button-2"]::before {
+.promo__slider-wrap input[type="radio"].promo__button-2:checked ~ .promo-paginator > label[for="promo-button-2"]::before {
   content: "";
   position: absolute;
   top: 0;
@@ -614,7 +614,7 @@ iframe {
   border-radius: 50%;
 }
 
-.promo__slider-wrap input[type="radio"].button-3:checked ~ .promo-paginator > label[for="button-3"]::before {
+.promo__slider-wrap input[type="radio"].promo__button-3:checked ~ .promo-paginator > label[for="promo-button-3"]::before {
   content: "";
   position: absolute;
   top: 0;
@@ -631,15 +631,15 @@ iframe {
   border-radius: 50%;
 }
 
-.promo__slider-wrap input[type="radio"].button-1:checked ~ .promo__slider > ul {
+.promo__slider-wrap input[type="radio"].promo__button-1:checked ~ .promo__slider > ul {
   left: 0;
 }
 
-.promo__slider-wrap input[type="radio"].button-2:checked ~ .promo__slider > ul {
+.promo__slider-wrap input[type="radio"].promo__button-2:checked ~ .promo__slider > ul {
   left: -100%;
 }
 
-.promo__slider-wrap input[type="radio"].button-3:checked ~ .promo__slider > ul {
+.promo__slider-wrap input[type="radio"].promo__button-3:checked ~ .promo__slider > ul {
   left: -200%;
 }
 
@@ -1120,19 +1120,19 @@ iframe {
   margin-bottom: 0;
 }
 
-.feature__slider-wrap input[type="radio"].button-4:checked ~ .feature-paginator > label[for="button-4"] {
+.feature__slider-wrap input[type="radio"].feature__button-1:checked ~ .feature-paginator > label[for="feature-button-1"] {
   color: #f0c52e;
 }
 
-.feature__slider-wrap input[type="radio"].button-5:checked ~ .feature-paginator > label[for="button-5"] {
+.feature__slider-wrap input[type="radio"].feature__button-2:checked ~ .feature-paginator > label[for="feature-button-2"] {
   color: #f0c52e;
 }
 
-.feature__slider-wrap input[type="radio"].button-6:checked ~ .feature-paginator > label[for="button-6"] {
+.feature__slider-wrap input[type="radio"].feature__button-3:checked ~ .feature-paginator > label[for="feature-button-3"] {
   color: #f0c52e;
 }
 
-.feature__slider-wrap input[type="radio"].button-4:checked ~ .feature-paginator > label[for="button-4"]::before {
+.feature__slider-wrap input[type="radio"].feature__button-1:checked ~ .feature-paginator > label[for="feature-button-1"]::before {
   content: "";
   position: absolute;
   top: 0;
@@ -1148,7 +1148,7 @@ iframe {
   background-color: #000000;
 }
 
-.feature__slider-wrap input[type="radio"].button-5:checked ~ .feature-paginator > label[for="button-5"]::before {
+.feature__slider-wrap input[type="radio"].feature__button-2:checked ~ .feature-paginator > label[for="feature-button-2"]::before {
   content: "";
   position: absolute;
   top: 0;
@@ -1164,7 +1164,7 @@ iframe {
   background-color: #000000;
 }
 
-.feature__slider-wrap input[type="radio"].button-6:checked ~ .feature-paginator > label[for="button-6"]::before {
+.feature__slider-wrap input[type="radio"].feature__button-3:checked ~ .feature-paginator > label[for="feature-button-3"]::before {
   content: "";
   position: absolute;
   top: 0;
@@ -1180,15 +1180,15 @@ iframe {
   background-color: #000000;
 }
 
-.feature__slider-wrap input[type="radio"].button-4:checked ~ .feature__slider > ul {
+.feature__slider-wrap input[type="radio"].feature__button-1:checked ~ .feature__slider > ul {
   left: 0;
 }
 
-.feature__slider-wrap input[type="radio"].button-5:checked ~ .feature__slider > ul {
+.feature__slider-wrap input[type="radio"].feature__button-2:checked ~ .feature__slider > ul {
   left: -100%;
 }
 
-.feature__slider-wrap input[type="radio"].button-6:checked ~ .feature__slider > ul {
+.feature__slider-wrap input[type="radio"].feature__button-3:checked ~ .feature__slider > ul {
   left: -200%;
 }
 
