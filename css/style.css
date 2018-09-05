@@ -86,11 +86,10 @@ iframe {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 1160px;
-  height: 299px;
-  margin: 40px auto 0;
-  padding: 0 60px;
+  margin: 0 auto;
+  padding: 40px 60px 0;
 
-  background-color: #f7e296;
+  background-image: linear-gradient(to bottom, #ffffff 0, #ffffff 40px, #f7e296 0, #f7e296);
 }
 
 .page-header__wrapper {
@@ -130,8 +129,11 @@ iframe {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+      flex-wrap: wrap;
   width: 100%;
   margin-bottom: 29px;
+
+  -ms-flex-wrap: wrap;
 }
 
 .search-form {
@@ -373,7 +375,7 @@ iframe {
 
 .main-menu__item > a {
   font-size: 18px;
-  line-height: 1.3;
+  line-height: 24px;
   font-family: "GilroyExtraBold", "Arial", "Helvetica", sans-serif;
   color: #000000;
   text-transform: uppercase;
@@ -435,7 +437,6 @@ iframe {
   position: absolute;
   top: 20px;
   left: -60px;
-  z-index: 10;
 
   display: -webkit-box;
   display: -ms-flexbox;
@@ -514,8 +515,10 @@ iframe {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 1160px;
-  margin: -137px auto 0 auto;
-  padding: 0 20px;
+  margin: 0 auto 131px;
+  padding: 26px 20px 0;
+
+  background-image: linear-gradient(to bottom, #f7e296 0, #f7e296 162px, #ffffff 0, #ffffff);
 }
 
 .promo__inner {
@@ -536,7 +539,7 @@ iframe {
 .promo__slider-wrap::before {
   content: "";
   position: absolute;
-  top: 63px;
+  top: 62px;
   left: 540px;
 
   display: block;
@@ -554,7 +557,7 @@ iframe {
   position: absolute;
   right: -38px;
   bottom: 156px;
-  z-index: 5;
+  z-index: 2;
 
   width: 200px;
   height: 10px;
@@ -651,6 +654,7 @@ iframe {
 
 .promo__slider ul {
   position: relative;
+  z-index: 1;
 
   display: -webkit-box;
   display: -ms-flexbox;
@@ -740,6 +744,7 @@ iframe {
   font-size: 15px;
   line-height: 2;
   font-family: "OpenSansLight", "Arial", "Helvetica", sans-serif;
+  color: #464646;
   letter-spacing: 0.01em;
 }
 
@@ -756,7 +761,7 @@ iframe {
   justify-content: center;
   align-items: center;
   width: 220px;
-  margin-bottom: 48px;
+  margin-bottom: 46px;
   padding: 8px 3px;
 
   font-size: 18px;
@@ -777,7 +782,7 @@ iframe {
 .promo__info-link::before {
   content: "";
   position: absolute;
-  top: 39%;
+  top: 38%;
   left: 0;
   z-index: -1;
 
@@ -829,11 +834,20 @@ iframe {
   padding: 4px 0 0 0;
 }
 
-.promo__info-param tbody {
-  -ms-flex-order: -1;
-  order: -1;
+.promo__info-param thead {
+  -ms-flex-order: 1;
+  order: 1;
 
-  -webkit-box-ordinal-group: 0;
+  color: #464646;
+
+  -webkit-box-ordinal-group: 2;
+}
+
+.promo__info-param tbody {
+  -ms-flex-order: 0;
+  order: 0;
+
+  -webkit-box-ordinal-group: 1;
 }
 
 .promo__info-param tbody td {
@@ -841,7 +855,6 @@ iframe {
   font-size: 36px;
   line-height: 1.333333333333333;
   font-family: "GilroyLight", "Arial", "Helvetica", sans-serif;
-  color: #464646;
   letter-spacing: 0.01em;
 }
 
@@ -861,8 +874,7 @@ iframe {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 1160px;
-  margin: 0 auto 262px auto;
-  padding-top: 132px;
+  margin: 0 auto 81px;
 
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
@@ -874,132 +886,68 @@ iframe {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   width: 160px;
-  height: 160px;
-
-  text-decoration: none;
-
-  background-color: #f7e296;
-
-  -webkit-transition: all 0.3s;
-          transition: all 0.3s;
-}
-
-.assortment__link::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  display: block;
-  width: 100%;
-  height: 100%;
-
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.assortment__link::after {
-  content: "";
-  position: absolute;
-  bottom: -83px;
-  left: 0;
-
-  display: block;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  width: 100%;
-  height: 50px;
-  overflow-y: hidden;
-  overflow-y: auto;
 
   font-weight: 800;
   font-size: 18px;
   line-height: 1.333333333333333;
   font-family: "GilroyExtraBold", "Arial", "Helvetica", sans-serif;
   color: #000000;
+  text-decoration: none;
   letter-spacing: 0.01em;
-  letter-spacing: 0.5px;
+
+  -webkit-transition: all 0.3s;
+          transition: all 0.3s;
+
+  -webkit-box-align: center;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -webkit-box-pack: start;
+  -ms-flex-align: center;
+  -ms-flex-pack: start;
 }
 
-.assortment__link:first-child::before {
-  top: -1px;
-  left: -1px;
+.assortment__link-img {
+  background-color: #f7e296;
 
-  background-image: url("../img/popular-1.svg");
+  -webkit-transition: all 0.3s;
+          transition: all 0.3s;
 }
 
-.assortment__link:first-child::after {
-  content: "Виртуальная реальность";
+.assortment__link span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 160px;
+  padding-top: 33px;
+
+  -webkit-transition: all 0.3s;
+          transition: all 0.3s;
 }
 
-.assortment__link:nth-child(2)::before {
-  top: -2px;
-  left: 1px;
-
-  background-image: url("../img/popular-2.svg");
-  background-position: center bottom;
+.assortment__link:nth-child(2) span {
+  padding-right: 33px;
 }
 
-.assortment__link:nth-child(2)::after {
-  content: "Моноподы для селфи";
-
-  padding-right: 30px;
-}
-
-.assortment__link:nth-child(3)::before {
-  top: 1px;
-  left: 4px;
-
-  background-image: url("../img/popular-3.svg");
-}
-
-.assortment__link:nth-child(3)::after {
-  content: "Экшн-камеры";
-  bottom: -84px;
-}
-
-.assortment__link:nth-child(4)::before {
-  top: 2px;
-  left: 1px;
-
-  background-image: url("../img/popular-4.svg");
-}
-
-.assortment__link:nth-child(4)::after {
-  content: "Фитнес-браслеты";
-}
-
-.assortment__link:nth-child(5)::before {
-  top: 1px;
-  left: 3px;
-
-  background-image: url("../img/popular-5.svg");
-}
-
-.assortment__link:nth-child(5)::after {
-  content: "Умные часы";
-  bottom: -84px;
-}
-
-.assortment__link:last-child::before {
-  top: 3px;
-  left: -1px;
-
-  background-image: url("../img/poppular-6.svg");
-}
-
-.assortment__link:last-child::after {
-  content: "Квадрокоптеры";
-  bottom: -84px;
-}
-
-.assortment__link:hover {
+.assortment__link:hover .assortment__link-img {
   background-color: #f0c52e;
 }
 
-.assortment__link:active::before,
-.assortment__link:active::after {
+.assortment__link:active .assortment__link-img,
+.assortment__link:focus .assortment__link-img {
+  background-color: #f0c52e;
+
+  fill: rgba(54, 54, 54, 0.3);
+}
+
+.assortment__link:active span,
+.assortment__link:focus span {
   opacity: 0.3;
 }
 
@@ -1012,8 +960,9 @@ iframe {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 0 auto 94px auto;
+  padding-bottom: 69px;
 
-  background-color: #e5e5e5;
+  background-image: linear-gradient(to bottom, #ffffff 0, #ffffff 100px, #e5e5e5 0, #e5e5e5);
 }
 
 .feature__inner {
@@ -1025,9 +974,10 @@ iframe {
 .feature__slider-wrap {
   position: relative;
 
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 100%;
-  height: 288px;
   margin: auto;
 }
 
@@ -1036,9 +986,6 @@ iframe {
 }
 
 .feature-paginator {
-  position: absolute;
-  top: -101px;
-  left: 0;
   z-index: 5;
 
   display: -webkit-box;
@@ -1050,8 +997,8 @@ iframe {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 284px;
-  height: 320px;
-  padding-top: 10px;
+  margin-right: 117px;
+  padding: 80px 0 71px;
 
   font-weight: 800;
   font-size: 18px;
@@ -1083,6 +1030,7 @@ iframe {
   padding: 8px 3px;
 
   text-align: center;
+  color: #000000;
 
   cursor: pointer;
 
@@ -1121,15 +1069,15 @@ iframe {
 }
 
 .feature__slider-wrap input[type="radio"].feature__button-1:checked ~ .feature-paginator > label[for="feature-button-1"] {
-  color: #f0c52e;
+  color: #f7e184;
 }
 
 .feature__slider-wrap input[type="radio"].feature__button-2:checked ~ .feature-paginator > label[for="feature-button-2"] {
-  color: #f0c52e;
+  color: #f7e184;
 }
 
 .feature__slider-wrap input[type="radio"].feature__button-3:checked ~ .feature-paginator > label[for="feature-button-3"] {
-  color: #f0c52e;
+  color: #f7e184;
 }
 
 .feature__slider-wrap input[type="radio"].feature__button-1:checked ~ .feature-paginator > label[for="feature-button-1"]::before {
@@ -1194,13 +1142,13 @@ iframe {
 
 .feature__slider {
   position: relative;
-  top: -104px;
-  left: 3px;
 
   display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   width: 700px;
-  margin-left: 400px;
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .feature__slider ul {
@@ -1209,9 +1157,11 @@ iframe {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   width: 500%;
   margin: 0;
-  padding: 0;
+  padding: 21px 0 0 0;
 
   list-style: none;
 }
@@ -1235,7 +1185,7 @@ iframe {
   content: "";
   position: absolute;
   top: 46px;
-  right: -23px;
+  right: -25px;
 
   display: block;
   width: 200px;
@@ -1269,6 +1219,7 @@ iframe {
   font-size: 47px;
   line-height: 1.021276595744681;
   font-family: "GilroyExtraBold", "Arial", "Helvetica", sans-serif;
+  color: #000000;
   letter-spacing: 0.01em;
 }
 
@@ -1280,6 +1231,7 @@ iframe {
   font-size: 15px;
   line-height: 2;
   font-family: "OpenSansLight", "Arial", "Helvetica", sans-serif;
+  color: #464646;
   letter-spacing: 0.01em;
 }
 
@@ -1366,6 +1318,7 @@ iframe {
   font-size: 47px;
   line-height: 1.021276595744681;
   font-family: "GilroyExtraBold", "Arial", "Helvetica", sans-serif;
+  color: #000000;
   letter-spacing: 0.01em;
 }
 
@@ -1392,6 +1345,7 @@ iframe {
   font-size: 15px;
   line-height: 2;
   font-family: "OpenSansLight", "Arial", "Helvetica", sans-serif;
+  color: #464646;
   letter-spacing: 0.1px;
 }
 
@@ -1416,6 +1370,7 @@ iframe {
   font-size: 16px;
   line-height: 2.5;
   font-family: "GilroyExtraBold", "Arial", "Helvetica", sans-serif;
+  color: #000000;
   letter-spacing: 0;
 }
 
@@ -1576,6 +1531,7 @@ iframe {
 
 .page-footer__block {
   position: relative;
+
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1633,11 +1589,11 @@ iframe {
 
 .page-footer__link:hover,
 .page-footer__link:focus {
-  color: rgba(255, 255, 255, 0.6);
+  opacity: 0.6;
 }
 
 .page-footer__link:active {
-  color: rgba(255, 255, 255, 0.3);
+  opacity: 0.3;
 }
 
 .page-footer__link:last-child {
@@ -1706,6 +1662,7 @@ iframe {
   position: absolute;
   top: 0;
   right: 0;
+
   width: 900px;
   max-width: 900px;
   padding-left: 450px;
@@ -1717,6 +1674,7 @@ iframe {
 
 .user-nav--footer-catalog .user-nav__exit--footer {
   margin-right: 62px;
+
   color: rgba(255, 255, 255, 0.3);
 }
 
@@ -1753,6 +1711,8 @@ iframe {
 }
 
 .user-nav__compare--footer {
+  position: relative;
+
   margin-right: 60px;
   margin-left: 0;
 }
@@ -1822,8 +1782,9 @@ iframe {
   z-index: 1000;
 
   width: 100%;
+  min-width: 100%;
   height: 100%;
-  padding-top: 100px;
+  min-height: 100%;
   overflow: auto;
 
   background-color: transparent;
@@ -1831,7 +1792,11 @@ iframe {
 
 .popup-map,
 .popup-form {
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
 
   display: block;
   -webkit-box-sizing: border-box;
@@ -1889,6 +1854,11 @@ iframe {
   margin-bottom: 45px;
   padding: 20px;
 
+  font-size: 14px;
+  line-height: 18px;
+  font-family: "OpenSans", "Arial", "Helvetica", sans-serif;
+  color: rgba(70, 70, 70, 0.4);
+
   background-color: #f2f2f2;
   border: none;
 
@@ -1923,6 +1893,7 @@ iframe {
   font-size: 18px;
   line-height: 1.333333333333333;
   font-family: "GilroyExtraBold", "Aria", "Helvetica", sans-serif;
+  color: #000000;
   letter-spacing: 0;
 }
 
@@ -1930,9 +1901,13 @@ iframe {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 360px;
-  height: 50px;
   margin-bottom: 35px;
-  padding: 10px 20px;
+  padding: 16px 20px;
+
+  font-size: 14px;
+  line-height: 18px;
+  font-family: "OpenSans", "Arial", "Helvetica", sans-serif;
+  color: rgba(70, 70, 70, 0.4);
 
   background: #f2f2f2;
   border: none;
@@ -2105,7 +2080,7 @@ iframe {
 /* begin of header--catalog */
 
 .page-header--catalog {
-  height: 186px;
+  padding-bottom: 49px;
 }
 
 .user-nav--catalog {
@@ -2150,6 +2125,7 @@ iframe {
   font-size: 47px;
   line-height: 1.021276595744681;
   font-family: "GilroyExtraBold", "Arial", "Helvetica", sans-serif;
+  color: #000000;
   letter-spacing: 0.01em;
 }
 
@@ -2259,6 +2235,7 @@ iframe {
   font-size: 16px;
   line-height: 1.5;
   font-family: "GilroyExtraBold", "Arial", "Helvetica", sans-serif;
+  color: #000000;
   text-transform: uppercase;
   letter-spacing: 0.2em;
 }
@@ -2390,7 +2367,7 @@ iframe {
   display: flex;
   -ms-flex-direction: column;
       flex-direction: column;
-  margin: 0 0 26px;
+  margin: 0 0 34px;
   padding: 69px 0 0;
 
   border-top: 2px solid #000000;
@@ -2434,6 +2411,7 @@ iframe {
   font-size: 18px;
   line-height: 1.333333333333333;
   font-family: "GilroyExtraBold", "Arial", "Helvetica", sans-serif;
+  color: #000000;
   letter-spacing: 0.01em;
 }
 
@@ -2442,7 +2420,7 @@ iframe {
 
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  margin-bottom: 1px;
+  margin-bottom: 9px;
 }
 
 .form-filter__scale {
@@ -2510,7 +2488,7 @@ iframe {
 .form-filter__interval label {
   font-weight: 300;
   font-size: 14px;
-  line-height: 2.857142857142857;
+  line-height: 24px;
   font-family: "GilroyLight", "Arial", "Helvetica", sans-serif;
   color: rgba(0, 0, 0, 0.2);
   letter-spacing: 0.01em;
@@ -2522,8 +2500,9 @@ iframe {
   width: 72px;
   padding: 0 5px;
 
+  font-weight: 300;
   font-size: 14px;
-  line-height: 1.285714285714286;
+  line-height: 24px;
   font-family: "GilroyLight", "Arial", "Helvetica", sans-serif;
   color: #000000;
   letter-spacing: 0;
@@ -2554,6 +2533,7 @@ iframe {
   font-size: 14px;
   line-height: 2.857142857142857;
   font-family: "OpenSansLight", "Arial", "Helvetica", sans-serif;
+  color: #000000;
   letter-spacing: 0.01em;
 
   cursor: pointer;
@@ -2709,8 +2689,7 @@ iframe {
   -ms-flex-direction: column;
       flex-direction: column;
   width: 360px;
-  height: 464px;
-  margin: 0 40px 42px 0;
+  margin: 0 40px 14px 0;
 
   -webkit-box-direction: normal;
   -webkit-box-orient: vertical;
@@ -2722,7 +2701,7 @@ iframe {
 
 .product-card:nth-child(3),
 .product-card:nth-child(4) {
-  margin-bottom: 31px;
+  margin-bottom: 3px;
 }
 
 .product-card:nth-child(2) .product-head__title {
@@ -2734,14 +2713,17 @@ iframe {
   display: -ms-flexbox;
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
   -ms-flex-order: 1;
   order: 1;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 32px 0;
 
+  -webkit-box-align: baseline;
   -webkit-box-ordinal-group: 2;
   -webkit-box-pack: justify;
+  -ms-flex-align: baseline;
   -ms-flex-pack: justify;
 }
 
@@ -2780,31 +2762,35 @@ iframe {
           transition: all 0.3s;
 }
 
-.product-card:last-of-type::after {
+.product-block--label-new::after {
   content: "new";
   position: absolute;
   top: 29px;
   right: 27px;
+
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   width: 56px;
   height: 56px;
-  font-family: "GilroyExtraBold", "Arial", "Helvetica", sans-serif;
-  font-size: 14px;
+
   font-weight: 800;
-  color: rgba(0, 0, 0, 0.1);
+  font-size: 14px;
   line-height: 1.714285714285714;
-  letter-spacing: 0.05em;
+  font-family: "GilroyExtraBold", "Arial", "Helvetica", sans-serif;
+  color: rgba(0, 0, 0, 0.1);
   text-transform: uppercase;
+  letter-spacing: 0.05em;
+
   border: 2px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
+
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
+  -ms-flex-align: center;
+  -ms-flex-pack: center;
 }
 
 .product-links {
@@ -2858,6 +2844,7 @@ iframe {
   overflow-y: hidden;
 
   font-size: 18px;
+  line-height: 24px;
   font-family: "GilroyExtraBold", "Arial", "Helvetica", sans-serif;
   text-align: center;
   color: #000000;

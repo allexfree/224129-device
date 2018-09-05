@@ -37,7 +37,9 @@ var contactLinkClickHandler = function (evt) {
 
 var btnCloseClickHandler = function () {
   mapModalOverlay.classList.add('hidden');
+  mapModalOverlay.removeAttribute('style');
   formModalOverlay.classList.add('hidden');
+  formModalOverlay.removeAttribute('style');
 }
 
 var escPressHandler = function (evt) {
