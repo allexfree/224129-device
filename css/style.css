@@ -2020,6 +2020,7 @@ iframe {
   border-radius: 50%;
   outline: none;
   cursor: pointer;
+  z-index: 1;
 }
 
 .close-btn:hover,

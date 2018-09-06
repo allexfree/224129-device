@@ -457,9 +457,7 @@
 
 
   <div class="map-popup-overlay hidden">
-    <div class="popup-map">
-      <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Afe4377b97dc8234eb7981701d78a9d615b1ea40eb88b5850a05a94e5e0ac925a&amp;source=constructor"
-        width="960" height="560"></iframe>
+    <div id="ya-map" class="popup-map">
       <button class="close-btn close-btn--map" type="button" tabindex="0">
         <span class="visually-hidden">Закрыть</span>
       </button>
@@ -495,6 +493,8 @@
     </form>
   </div>
 
+  <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+  <script src="js/map.js"></script>
   <script src="js/common.js"></script>
 
 </body>
