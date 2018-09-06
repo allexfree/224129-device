@@ -547,6 +547,10 @@ iframe {
   background-color: #ffffff;
 }
 
+.promo__slider-wrap input[type="radio"] {
+  visibility: hidden;
+}
+
 .promo-paginator {
   position: absolute;
   right: -38px;
