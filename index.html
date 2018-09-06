@@ -73,9 +73,9 @@
       <div class="promo__inner">
         <div class="promo__slider-wrap">
 
-          <input id="promo-button-1" class="promo__button-1" type="radio" name="promo-controls" checked>
-          <input id="promo-button-2" class="promo__button-2" type="radio" name="promo-controls">
-          <input id="promo-button-3" class="promo__button-3" type="radio" name="promo-controls">
+          <input id="promo-button-1" class="promo__button-1 visually-hidden" type="radio" name="promo-controls" checked>
+          <input id="promo-button-2" class="promo__button-2 visually-hidden" type="radio" name="promo-controls">
+          <input id="promo-button-3" class="promo__button-3 visually-hidden" type="radio" name="promo-controls">
 
           <div class="promo-paginator">
             <label for="promo-button-1"></label>
@@ -95,7 +95,7 @@
                   <p class="promo__info-text">Самая длинная палка для селфи доступна в нашем магазине.<span>Восемь (Восемь,
                       Карл!) метров длиной и весом всего 5 килограмм.</span>
                   </p>
-                  <a class="promo__info-link" href="#" onclick="return false">Подробнее</a>
+                  <a class="promo__info-link" href="#" >Подробнее</a>
                   <table class="promo__info-param">
                     <thead>
                       <tr>
@@ -124,7 +124,7 @@
                   <p class="promo__info-text">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия
                     и соблюдать диету.
                   </p>
-                  <a class="promo__info-link" href="#" onclick="return false">Подробнее</a>
+                  <a class="promo__info-link" href="#" >Подробнее</a>
                   <table class="promo__info-param">
                     <thead>
                       <tr>
@@ -149,7 +149,7 @@
                   <p class="promo__info-text">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным
                     под стандартную камеру.
                   </p>
-                  <a class="promo__info-link" href="#" onclick="return false">Подробнее</a>
+                  <a class="promo__info-link" href="#" >Подробнее</a>
                   <table class="promo__info-param">
                     <thead>
                       <tr>
@@ -174,7 +174,7 @@
     </div>
 
     <div class="assortment">
-      <a class="assortment__link" href="#" aria-label="Виртуальная реальность" onclick="return false">
+      <a class="assortment__link" href="#" aria-label="Виртуальная реальность" >
         <svg class="assortment__link-img" width="160" height="160" viewBox="0 0 160 160" fill="#363636">
           <g>
             <path class="st0" d="M115.7,85.1V72.5c0-1.3,1-2.4,2.3-2.4l8.3,1.6v-8.2c0-2.4-1.7-3.4-4.2-4.3l-23.2-6.6c1.6,1.4,1.9,2,1.9,4.4
@@ -190,7 +190,7 @@
         </svg>
         <span>Виртуальная реальность</span>
       </a>
-      <a class="assortment__link" href="#" aria-label="Моноподы для селфи" onclick="return false">
+      <a class="assortment__link" href="#" aria-label="Моноподы для селфи" >
           <svg class="assortment__link-img" width="160" height="160" viewBox="0 0 160 160" fill="#363636">
               <g>
                 <path class="st0" d="M119.7,45H40.3c-1.8,0-3.2,1.4-3.2,3.2v46.4c0,1.8,1.4,3.2,3.2,3.2l0,0h79.5c1.8,0,3.2-1.4,3.2-3.2l0,0V48.2
@@ -202,7 +202,7 @@
               </svg>
         <span>Моноподы для селфи</span>
       </a>
-      <a class="assortment__link" href="#" aria-label="Экшн-камеры" onclick="return false">
+      <a class="assortment__link" href="#" aria-label="Экшн-камеры" >
         <svg class="assortment__link-img" width="160" height="160" viewBox="0 0 160 160" fill="#363636">
           <g>
             <path class="st0" d="M101.8,40c0-0.7-0.6-1.5-1.3-1.5h-43c-0.7,0-1.4,0.8-1.4,1.5v3.5h45.7L101.8,40L101.8,40z M102.7,120.3h-9.6
@@ -224,7 +224,7 @@
         </svg>
         <span>Экшн-камеры</span>
       </a>
-      <a class="assortment__link" href="#" aria-label="Фитнес-браслеты" onclick="return false">
+      <a class="assortment__link" href="#" aria-label="Фитнес-браслеты" >
           <svg class="assortment__link-img" width="160" height="160" viewBox="0 0 160 160" fill="#363636">
               <g>
                 <path class="st0" d="M125.3,53.7c0.8,1.4,1.2,3.1,1.2,4.8v21.1c0,4.6-3.1,8.5-7.2,9.9c-1.3,4-3.8,7.9-8.1,10.4
@@ -281,7 +281,7 @@
                         
         <span>Фитнес-браслеты</span>
       </a>
-      <a class="assortment__link" href="#" aria-label="Умные часы" onclick="return false">
+      <a class="assortment__link" href="#" aria-label="Умные часы" >
           <svg class="assortment__link-img" width="160" height="160" viewBox="0 0 160 160" fill="#363636">
               <g>
                 <path class="st0" d="M108.5,65.2H107v-4.6c0-5.1-4.1-9.2-9.1-9.2H63.1c-5,0-9.1,4.1-9.1,9.2v42.9c0,5.1,4.1,9.2,9.1,9.2h34.8
@@ -299,7 +299,7 @@
               </svg>                         
         <span>Умные часы</span>
       </a>
-      <a class="assortment__link" href="#" aria-label="Квадрокоптеры" onclick="return false">
+      <a class="assortment__link" href="#" aria-label="Квадрокоптеры" >
           <svg class="assortment__link-img" width="160" height="160" viewBox="0 0 160 160" fill="#363636">
               <g>
                 <path class="st0" d="M26,47.8c-5.5,0.5-10.2,1.6-11.5,2.7c-0.7,0.6-0.7,0.6-0.2,1.2c0.6,0.7,3.7,1.6,7.2,2.2
