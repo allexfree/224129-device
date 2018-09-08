@@ -9,6 +9,7 @@ var htmlBlock;
 
 var isStorageSupport = true;
 var storage;
+var empty = '';
 
 var menuDropdown = document.querySelector('.main-menu__dropdown');
 var linksFocused = menuDropdown.querySelectorAll('.main-menu__dropdown-item a');
@@ -41,6 +42,25 @@ try {
   isStorageSupport = false;
 }
 
+var isInputFocused = function () {
+
+  isStorageTrue();
+
+  inputUserName.onfocus = function () {
+    inputUserName.setAttribute('style', '');
+  }
+
+  inputUserMail.onfocus = function () {
+    inputUserMail.setAttribute('style', '');
+  }
+};
+
+var isStorageTrue = function () {
+  if (isStorageSupport) {
+    localStorage.setItem('userMail', inputUserMail.value);
+  }
+};
+
 var mapLinkClickHandler = function (evt) {
   evt.preventDefault();
   mapModalOverlay.classList.remove('hidden');
@@ -62,7 +82,10 @@ var btnCloseClickHandler = function () {
   mapModalOverlay.removeAttribute('style');
   formModalOverlay.classList.add('hidden');
   formModalOverlay.removeAttribute('style');
+  inputUserName.removeAttribute('style');
+  inputUserName.value = '';
   inputUserMail.removeAttribute('style');
+  inputUserMail.value = '';
   contactForm.classList.remove('popup-error');
 };
 
@@ -70,28 +93,35 @@ var escPressHandler = function (evt) {
   if (evt.keyCode === ESC_KEYCODE && evt.target !== inputUserName && evt.target !== inputUserMail && evt.target !== formUserText) {
     mapModalOverlay.classList.add('hidden');
     formModalOverlay.classList.add('hidden');
+    inputUserName.removeAttribute('style');
+    inputUserName.value = '';
     inputUserMail.removeAttribute('style');
+    inputUserMail.value = '';
     contactForm.classList.remove('popup-error');
   }
 };
 
 var btnSubmitClickHandler = function (evt) {
-  target = evt.target;
-  if (target === formSubmitBtn && inputUserMail.value === '') {
-    inputUserMail.setAttribute('style', 'background-color: #f6dada; outline: none');
-    contactForm.classList.remove('popup-error');
-    contactForm.offsetWidth = contactForm.offsetWidth;
+
+  isInputFocused();
+
+  if (inputUserName.value === empty) {
+    evt.preventDefault();
     contactForm.classList.add('popup-error');
-  } else {
-    if (isStorageSupport) {
-      localStorage.setItem('userMail', inputUserMail.value);
-    }
+    inputUserName.setAttribute('style', 'background-color: #f6dada; outline: none');
+  } else if (inputUserMail.value === empty) {
+    evt.preventDefault();
+    contactForm.classList.add('popup-error');
+    inputUserMail.setAttribute('style', 'background-color: #f6dada; outline: none');
+    localStorage.setItem('userMail', inputUserMail.value);
+  } else if (inputUserName.value !== empty && inputUserMail !== empty) {
+    return;
   }
 };
 
 mapLink.addEventListener('click', mapLinkClickHandler);
 contactLink.addEventListener('click', contactLinkClickHandler);
-formModalOverlay.addEventListener('click', btnSubmitClickHandler);
+formModalOverlay.addEventListener('submit', btnSubmitClickHandler);
 btnCloseMap.addEventListener('click', btnCloseClickHandler);
 btnCloseForm.addEventListener('click', btnCloseClickHandler);
 document.addEventListener('keydown', escPressHandler);
