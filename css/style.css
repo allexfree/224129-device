@@ -443,8 +443,7 @@ iframe {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 1160px;
-  height: 167px;
-  padding: 27px 0 0 61px;
+  padding: 27px 0 32px 61px;
   overflow-y: auto;
 
   list-style: none;
@@ -1179,7 +1178,7 @@ iframe {
           box-sizing: border-box;
   width: 500%;
   margin: 0;
-  padding: 21px 0 0 0;
+  padding: 0;
 
   list-style: none;
 }
@@ -1193,7 +1192,7 @@ iframe {
   -ms-flex-direction: column;
       flex-direction: column;
   width: 700px;
-  height: 288px;
+  padding: 73px 0 70px;
   overflow-x: hidden;
   overflow-y: auto;
 
@@ -1204,7 +1203,7 @@ iframe {
 .feature__slide::after {
   content: "";
   position: absolute;
-  top: 46px;
+  top: 67px;
   right: -25px;
 
   display: block;
@@ -1232,7 +1231,7 @@ iframe {
 }
 
 .feature__slide-title {
-  margin-top: 52px;
+  margin-top: 0;
   margin-bottom: 31px;
 
   font-weight: 800;
