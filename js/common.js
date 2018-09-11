@@ -105,23 +105,27 @@ var btnSubmitClickHandler = function (evt) {
 
   isInputFocused();
 
-  if (inputUserName.value === empty) {
-    evt.preventDefault();
-    contactForm.classList.add('popup-error');
-    inputUserName.setAttribute('style', 'background-color: #f6dada; outline: none');
-  } else if (inputUserMail.value === empty) {
-    evt.preventDefault();
-    contactForm.classList.add('popup-error');
-    inputUserMail.setAttribute('style', 'background-color: #f6dada; outline: none');
-    localStorage.setItem('userMail', inputUserMail.value);
-  } else if (inputUserName.value !== empty && inputUserMail !== empty) {
-    return;
+  if (inputUserName.value === empty || inputUserMail.value === empty) {
+     evt.preventDefault();
+     contactForm.classList.remove('popup-error');
+     void contactForm.offsetWidth;
+     contactForm.classList.add('popup-error');
+
+     if (inputUserName.value === empty) {
+      inputUserName.setAttribute('style', 'background-color: #f6dada; outline: none');
+      return;
+     }
+
+     if (inputUserMail.value === empty) {
+      inputUserMail.setAttribute('style', 'background-color: #f6dada; outline: none');
+      return;
+     }
   }
 };
 
 mapLink.addEventListener('click', mapLinkClickHandler);
 contactLink.addEventListener('click', contactLinkClickHandler);
-formModalOverlay.addEventListener('submit', btnSubmitClickHandler);
+contactForm.addEventListener('submit', btnSubmitClickHandler);
 btnCloseMap.addEventListener('click', btnCloseClickHandler);
 btnCloseForm.addEventListener('click', btnCloseClickHandler);
 document.addEventListener('keydown', escPressHandler);
@@ -147,7 +151,7 @@ function init() {
     },
     {
       iconLayout: 'default#image',
-      iconImageHref: '../img/map-pointer.svg',
+      iconImageHref: 'img/map-pointer.svg',
       iconImageSize: [100, 100],
       iconImageOffset: [-45, -90]
     });
