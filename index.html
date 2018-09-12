@@ -471,12 +471,12 @@
 
           <div class="popup-form__user-name">
             <label class="popup-form__label" for="name-user">Ваше имя:</label>
-            <input id="name-user" class="popup-form__input" type="text" name="user-name" placeholder="Имя Фамилия">
+            <input id="name-user" class="popup-form__input" type="text" name="user-name" pattern="(^[a-zа-яA-ZА-Я][a-zа-яA-ZА-Я0-9-_\.\s]{1,20}$)" placeholder="Имя Фамилия">
           </div>
 
           <div class="popup-form__user-email">
             <label class="popup-form__label" for="mail-user">Ваш e-mail:</label>
-            <input id="mail-user" class="popup-form__input" type="email" name="user-mail" placeholder="email@example.com">
+            <input id="mail-user" class="popup-form__input" type="email" name="user-mail" pattern="(\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,6})" placeholder="email@example.com">
           </div>
         </div>
 
